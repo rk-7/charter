@@ -199,7 +199,6 @@ export class ZoomableScatter {
   }
 
   private zoomed({ transform }): void {
-    console.log(transform);
     const zx = transform.rescaleX(this.x).interpolate(d3.interpolateRound);
     const zy = transform.rescaleY(this.y).interpolate(d3.interpolateRound);
     this.gDot
