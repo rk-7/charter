@@ -1,13 +1,20 @@
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { appCopyright, appName } from './constants';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
-  title = 'D3 charts examples';
+  public get title(): string {
+    return appName;
+  }
+  public get appCopyright(): string {
+    return appCopyright;
+  }
   mobileQuery: MediaQueryList;
   navItems: {name: string, url: string }[];
   private mobileQueryListener: () => void;
