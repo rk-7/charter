@@ -1,5 +1,24 @@
 # D3.js ❤️ Angular charts examples
 
+## Live preview
+
+Visit the link https://rk-7.github.io/charter/
+
+## Background
+
+I came across the scenario where I needed implementation of D3.js charts with Angular.
+
+There are great articles for D3.js but finding the ones that use the latest D3 version has been really hard.
+Moreover, finding a typescript implementation of D3.js charts is rarity.
+
+The purpose of this project is to keep/showcase examples of D3.js and Angular together.
+
+## Charts implemented
+1. Scatter chart
+
+----
+
+## Angular project Readme below:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
