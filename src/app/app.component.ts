@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import { Router } from '@angular/router';
 import { appCopyright, appName } from './constants';
+
 
 @Component({
   selector: 'app-root',
@@ -21,12 +21,12 @@ export class AppComponent implements OnDestroy {
 
   constructor(
     changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,
-    private readonly router: Router
     ) {
     this.populateRoutes();
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addEventListener('change', this.mobileQueryListener);
+
   }
   populateRoutes(): void {
     this.navItems = new Array<{name: string, url: string }>();
